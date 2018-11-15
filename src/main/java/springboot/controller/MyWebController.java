@@ -20,7 +20,8 @@ public class MyWebController {
         String date = dtf.format(now);
         String result = new Calc().setDate(date);
         model.addAttribute("date", date);
-        model.addAttribute("result", result);
+        model.addAttribute("result1", result.substring(0,7));
+        model.addAttribute("result2", result.substring(7,13));
         return "index";
     }
 
@@ -32,7 +33,8 @@ public class MyWebController {
     {
         String result = new Calc().setDate(date);
         model.addAttribute("date", date);
-        model.addAttribute("result", result);
+        model.addAttribute("result1", result.substring(0,7));
+        model.addAttribute("result2", result.substring(7,13));
         return "index";
     }
 }
